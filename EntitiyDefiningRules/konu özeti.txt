@@ -1,0 +1,19 @@
+﻿Varlık sınıfları oluşturulurken tekil ad kullanılır örneğin : Product
+Bu sınıflar tabloları temsil edeceğinde Context sınıfımızın içinde 'DbSet<Product> Products' şeklinde çoğul olacak şekilde isimlendirilir
+Tablo adları DbSet property'lerinin isimlendirmelerinden oluşacaktır.
+Context sınıfımızın adı DbContext 'ten miras alacağı için FalanFilanDbContext şeklinde 'DbContext' eki alacak şekilde adlandırılır.
+
+OnConfiguring fonksiyonu, EntitiyFrameworkCore aracını yapılandırmak için kullandığımız metodun adıdır.
+Context nesnesinde 'override' ederek kullanılır.
+ 
+!! OnConfiguring Kullanım amaçları :
+hangi tür veritabanına karşılık davranış sergilenecek : Provider
+Hangi sunucuda olacak : ConnectionString
+Lazy & Eager loading hangisi olacak?
+
+
+Tablolara PrimaryKey tanımlamak : 
+//EFCore her tabloda primary key'e ait bir  kolon olmamasını şart koşar. Primary Key'e karşılık gelen bu property tanımlı olmazsa hata verir.
+//Bir entity içindeki propertytilerden adı ' Id , ID, UrunId, UrunID ' olan property EFCore tarafından PrimaryKey olarak kabul edilir.
+
+
